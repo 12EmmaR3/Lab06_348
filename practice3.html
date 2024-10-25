@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .bg {background-color: rgb(197, 231, 241) ;}
+        </style>
+    </head>
+<body>
+    <h1>EECS 348 Lab Seven Practice Three</h1>
+    
+    <p>First password: <input type="text" id="firstPass" value=""></p>
+    <p>Second password: <input type="text" id="secPass" value=""></p>
+
+    <button onclick="validate()">Validate your Passwords!</button>
+
+    <script>
+        function validate() {
+            const passwordOne = document.getElementById('firstPass').value;
+            const passwordTwo = document.getElementById('secPass').value;
+
+            if (passwordOne.length < 8) {
+                alert("The length of the first password is less than 8 letters!");
+            } else if (passwordTwo.length < 8) {
+                alert("The length of the second password is less than 8 letters!");
+            } else if (passwordOne !== passwordTwo) {
+                alert("Two passwords don't match!");
+            } else {
+                alert("Everything is good!");
+            }
+        }
+    </script>
+</body>
+</html>
